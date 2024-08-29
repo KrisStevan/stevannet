@@ -1,0 +1,3 @@
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/iB1CCbmwhlk/0.jpg" frameborder="0" height="266" src="http://www.youtube.com/embed/iB1CCbmwhlk?feature=player_embedded" width="320"></iframe>
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/KXlQwk4Qe-Q/0.jpg" frameborder="0" height="266" src="http://www.youtube.com/embed/KXlQwk4Qe-Q?feature=player_embedded" width="320"></iframe>
+<iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/Ch1myTyyZZA/0.jpg" frameborder="0" height="266" src="http://www.youtube.com/embed/Ch1myTyyZZA?feature=player_embedded" width="320"></iframe>
