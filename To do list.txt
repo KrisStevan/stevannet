@@ -1,0 +1,53 @@
+Keterangan:
+1. desain home.html = semua topik
+2. events = kejadian
+3. jokes = gambar, artikel lucu
+4. opinions = opini pribadi dan ringkasan opini orang lain
+5. comments = komentar pengunjung (bebas)
+6. ask me = bertanya apapun (ada aturan)
+7. tombol kiri = berita/event/jokes tentang topik
+8. admin's room = login dulu admin, baru masuk. Isi:
+   - tambah news/events/joke/jawaban ask me
+9. Tabel (db = stevannet):
+   - Articles:
+	- id	
+	- judul
+	- tanggal_muat (sysdate)
+	- tanggal_terjadi
+	- id_jenis
+	- id_topik
+	- isi
+	- gambar
+	- sumber
+   - Jenis
+	- id
+	- nama_jenis (news/events/jokes/opinions)
+   - Topik
+	- id
+	- nama_topik
+   - Comments
+	- id
+	- isi
+	- tanggal
+   - Questions
+	- id
+	- pertanyaan
+	- tanggal_dimuat (sysdate)
+	- jawaban
+   - Users
+	- nama
+	- email
+	- username
+	- password
+	- reputation
+   - Opinions
+	- id
+	- judul
+	- tanggal_muat
+	- tanggal_dimuat
+	- isi
+	- nama (sumber)
+10. Hiasan:
+    - Ringkas file php 1 folder
+    - hapus error
+    - atur tampilan

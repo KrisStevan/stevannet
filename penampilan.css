@@ -1,0 +1,240 @@
+#header
+{
+	background:url('Images/Header.jpg');
+	height:70px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#admin
+{
+	margin-right: 50px;
+	text-align:center;
+}
+#txtHint
+{
+	height:50%;
+	width:90%;
+	margin-left:5%;
+}
+#txtDesc
+{
+	padding-bottom: 5%;
+	width:90%;
+	margin-left:5%;
+}
+h1
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-align:center;
+}
+.center h2, h3, h4
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin-left:20px;
+	margin-right:20px;
+	text-align:justify;
+}
+.center p, ol
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin-left:20px;
+	margin-right:20px;
+	text-align:justify;
+	font-size: 15px;
+}
+.right p,h3
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-align:center;
+}
+.center ol
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin-left:30px;
+	margin-right:50px;
+}
+.centerdetail p
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin-left:20px;
+	margin-right:50px;
+	text-align:justify;
+}
+.centerdetail ol
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin-left:30px;
+	margin-right:50px;
+}
+#menu
+{
+	width:97.3%;
+	margin-left: 18px;
+	margin-top: -15px;
+}
+#menu ul
+{
+	margin-top:5px;
+	font-size:20px;
+}
+#menu ul li
+{
+	position: relative;
+	left:-30px;
+	color:black;
+	display: inline;
+	float:left;
+	font-family: sans-serif;
+	list-style-type:none;
+}
+#menu ul li a
+{
+	position: relative;
+	margin-right:20px;
+	list-style-type:none;
+	text-decoration: none;
+	font-size: 18px;
+}
+#clock
+{
+	margin-top: -10px;
+	font-size: 40px;
+	color:white;
+	text-align:center;
+	background-color: #98CC94;
+}
+.leftside
+{	
+	float:left;
+	width:230px; 
+	margin-left: 20px;
+	margin-bottom: -25px;
+	background-color: #98CC94;
+}
+.leftsidedetail
+{	
+	float:left;
+	width:230px; 
+	margin-left: 20px;
+	background-color: #98CC94;
+}
+.leftside img, .leftsidedetail img
+{
+	border:none;
+	margin-left:0px;
+}
+.leftside li a, .leftsidedetail  li a
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin: 0; 
+	font-size: 10pt; 
+	font-weight: bold; 
+	background: #FFF; 
+	height: 20px; 
+	text-decoration: none;
+}
+#menu li a:hover
+{
+	opacity: 0.4;
+}
+.leftside li a:link, .leftside li a:visited, .leftsidedetail  li a:link, .leftsidedetail li a:visited
+{
+	color: #175a0f; 
+	display: block; 
+	background: url(http://lh6.ggpht.com/_7wsQzULWIwo/Sze7zmvMfQI/AAAAAAAACrQ/herewFa4gNQ/s800/menu6.gif); 
+	padding: 8px 0 0 10px;
+}
+.leftside li a:hover , .leftsidedetail li a:hover 
+{ 
+	color: #FFF; 
+	background: url(http://lh6.ggpht.com/_7wsQzULWIwo/Sze7zmvMfQI/AAAAAAAACrQ/herewFa4gNQ/s800/menu6.gif) 0 -32px; 
+	padding: 8px 0 0 10px; 
+} 
+.leftside ul, .leftsidedetail  ul
+{
+	list-style-type: none;
+	margin-left:-40px;
+	margin-top:0px;
+	font-size:20px;
+}
+.center, .centerdetail
+{
+	float:left;
+	width:760px; 
+	display: inline-block;
+}
+/*
+.centerdetail
+{
+	float:left;
+	width:760px; 
+	display: inline-block;
+}
+*/
+.centeradmin
+{
+	background-color:#FFF;
+	float:left;
+	margin-top:3px;
+	margin-left:20px;
+	margin-bottom:3px;
+	width:95.8%; 
+	display: inline-block;
+	border:1px solid black;
+}
+#petunjuk
+{
+	font-size:12px; 
+	margin-left:100px;
+}
+.right
+{
+	float:left;
+	width:19.6%;
+	display: inline-block;
+	border:1px solid;
+	position:absolute;
+}
+.right ul{
+	list-style-type: none;
+	margin-left:-40px;
+	margin-top:-3px;
+}
+.footer
+{
+	background:url('Images/Footer.jpg');
+	clear:both;
+	height:70px;
+	width:97%;
+	margin-left: 20px;
+	margin-right: 50px;
+	text-align: center;
+	position: relative;
+	z-index:1;
+}
+#tanggalKanan
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	margin-left:50px;
+	margin-right:50px;
+	text-align:right;
+}
+.tabelIsi tr td
+{
+	padding-bottom: 5px;
+}
+.tabelIsi .overlay 
+{
+    position:absolute;
+    top:45%;
+    width:0;
+    width:50%;
+    height:25%;
+    padding:10px;
+    background-color:rgba(0, 0, 0, 0.3);
+    display:none;
+}
+.tabelIsi:hover .overlay 
+{
+    display:block;
+}

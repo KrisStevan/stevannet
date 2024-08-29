@@ -1,0 +1,36 @@
+<table id="menu">
+			<tr bgcolor="#0f38eb" height="20px">
+				<td width="75%">
+					<ul>
+						<li>
+							<a href="home.php"><img src="Images/HomeButton.jpg" style="width:80px; height:40px;"></a>
+						</li>
+						<li>
+							<a href="news.php"><img src="Images/NewsButton.jpg" style="width:80px; height:40px;"></a>
+						</li>
+						<li>
+							<a href="events.php"><img src="Images/EventsButton.jpg" style="width:80px; height:40px;"></a>
+						</li>
+						<li>
+							<a href="jokes.php"><img src="Images/JokesButton.jpg" style="width:80px; height:40px;"></a>
+						</li>
+						<li>
+							<a href="opinions.php"><img src="Images/OpinionsButton.jpg" style="width:110px; height:40px;"></a>
+						</li>
+						<li>
+							<a href="comments.php"><img src="Images/CommentsButton.jpg" style="width:120px; height:40px;"></a>
+						</li>
+						<li>
+							<a href="askme.php"><img src="Images/AskButton.jpg" style="width:120px; height:40px;"></a>
+						</li>
+						<li>
+							<?php
+								if(isset($_SESSION['login_user'])){
+									echo "<a href=\"logs/logout.php\"><img src=\"Images/logoutButton.jpg\" style=\"width:110px; height:40px;\"></a>";
+								}
+							?>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
