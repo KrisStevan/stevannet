@@ -69,7 +69,7 @@
 					$row=mysqli_fetch_row($hasil_1);
 					if(!$row)
 						echo "Terjadi Kesalahan pada sistem anda";
-					echo "<img src=\"Images/Highlights.jpg\" style=\"margin-left:5px; width:750px; height:60px;\"><br><br>";				
+					echo "<img src=\"Images/Highlights.jpg\" style=\"margin-left:5px; width:750px; height:85px;\">";				
 					do{
 						echo "<p>";
 							list($id,$judul,$tanggal_muat,$tanggal_terjadi,$id_jenis,$id_topik,$isi,$gambar,$sumber) = $row;

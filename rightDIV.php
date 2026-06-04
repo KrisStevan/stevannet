@@ -1,10 +1,6 @@
 <ul>
 	<li>
-		<center>
-			<img src="Images/OTD.jpg" width="100%" height="92px" style="margin-top:2px; margin-left:0px;">
-		</center>
-	</li>
-	<li>
+		<div class="otd-title">On This Day</div>
 		<h3 align="center">
 		<?php
 			$today = date("d M Y");
@@ -20,7 +16,7 @@
 				$hasil=mysqli_query($connection,$sqlstr);
 				@$row=mysqli_fetch_row($hasil);
 				if(!$row){
-					echo "<center>Tidak ada kejadian yang terjadi pada tahun sebelumnya</center>";
+					echo "Tidak ada kejadian yang terjadi pada tahun sebelumnya";
 				}
 				else{
 					do{

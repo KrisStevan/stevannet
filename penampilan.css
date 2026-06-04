@@ -1,9 +1,11 @@
 #header
 {
-	background:url('Images/Header.jpg');
-	height:70px;
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	height:100px;
 	margin-left: 20px;
 	margin-right: 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
 }
 #admin
 {
@@ -24,53 +26,70 @@
 }
 h1
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	text-align:center;
+	color: #1a1a1a;
+	font-weight: 700;
+	letter-spacing: -0.5px;
 }
 .center h2, h3, h4
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	margin-left:20px;
 	margin-right:20px;
 	text-align:justify;
+	color: #2d3748;
+	font-weight: 600;
+	letter-spacing: -0.3px;
 }
 .center p, ol
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	margin-left:20px;
 	margin-right:20px;
 	text-align:justify;
 	font-size: 15px;
+	color: #4a5568;
+	line-height: 1.6;
 }
 .right p,h3
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	text-align:center;
+	color: #2d3748;
+	line-height: 1.6;
 }
 .center ol
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	margin-left:30px;
 	margin-right:50px;
+	color: #4a5568;
 }
 .centerdetail p
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	margin-left:20px;
 	margin-right:50px;
 	text-align:justify;
+	color: #4a5568;
+	line-height: 1.6;
 }
 .centerdetail ol
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 	margin-left:30px;
 	margin-right:50px;
+	color: #4a5568;
 }
 #menu
 {
 	width:97.3%;
 	margin-left: 18px;
-	margin-top: -15px;
+	margin-top: 0px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 #menu ul
 {
@@ -81,10 +100,10 @@ h1
 {
 	position: relative;
 	left:-30px;
-	color:black;
+	color:#2d3748;
 	display: inline;
 	float:left;
-	font-family: sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	list-style-type:none;
 }
 #menu ul li a
@@ -94,14 +113,30 @@ h1
 	list-style-type:none;
 	text-decoration: none;
 	font-size: 18px;
+	color: #2d3748;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	padding: 8px 12px;
+	border-radius: 6px;
+}
+#menu ul li a:hover
+{
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	color: white;
+	transform: translateY(-2px);
 }
 #clock
 {
-	margin-top: -10px;
+	margin-top: 0px;
 	font-size: 40px;
 	color:white;
 	text-align:center;
-	background-color: #98CC94;
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	border-radius: 10px;
+	padding: 15px;
+	margin-bottom: 15px;
+	box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+	font-weight: 600;
 }
 .leftside
 {	
@@ -109,46 +144,68 @@ h1
 	width:230px; 
 	margin-left: 20px;
 	margin-bottom: -25px;
-	background-color: #98CC94;
+	background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 .leftsidedetail
 {	
 	float:left;
 	width:230px; 
 	margin-left: 20px;
-	background-color: #98CC94;
+	background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 .leftside img, .leftsidedetail img
 {
 	border:none;
 	margin-left:0px;
+	border-radius: 18px;
+	box-shadow: 0 12px 30px rgba(16, 185, 129, 0.12);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leftside img:hover, .leftsidedetail img:hover {
+	transform: translateY(-3px) scale(1.01);
+	box-shadow: 0 16px 40px rgba(16, 185, 129, 0.18);
 }
 .leftside li a, .leftsidedetail  li a
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	margin: 0; 
 	font-size: 10pt; 
-	font-weight: bold; 
-	background: #FFF; 
-	height: 20px; 
+	font-weight: 500; 
+	background: #fff; 
+	height: auto;
 	text-decoration: none;
+	transition: all 0.3s ease;
+	display: block;
+	padding: 12px 15px;
+	border-radius: 6px;
+	margin: 5px 8px;
 }
 #menu li a:hover
 {
-	opacity: 0.4;
+	opacity: 1;
+	transform: translateX(4px);
 }
 .leftside li a:link, .leftside li a:visited, .leftsidedetail  li a:link, .leftsidedetail li a:visited
 {
-	color: #175a0f; 
+	color: #10b981;
 	display: block; 
-	background: url(http://lh6.ggpht.com/_7wsQzULWIwo/Sze7zmvMfQI/AAAAAAAACrQ/herewFa4gNQ/s800/menu6.gif); 
-	padding: 8px 0 0 10px;
+	background: #ffffff;
+	padding: 12px 15px 15px 30px;
+	border-left: 3px solid transparent;
+	border-radius: 6px;
 }
 .leftside li a:hover , .leftsidedetail li a:hover 
 { 
-	color: #FFF; 
-	background: url(http://lh6.ggpht.com/_7wsQzULWIwo/Sze7zmvMfQI/AAAAAAAACrQ/herewFa4gNQ/s800/menu6.gif) 0 -32px; 
-	padding: 8px 0 0 10px; 
+	color: #fff;
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	padding: 12px 15px;
+	border-left: 3px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 } 
 .leftside ul, .leftsidedetail  ul
 {
@@ -156,21 +213,91 @@ h1
 	margin-left:-40px;
 	margin-top:0px;
 	font-size:20px;
+	padding: 10px;
 }
 .center, .centerdetail
 {
 	float:left;
 	width:760px; 
 	display: inline-block;
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	margin: 0 0 20px 20px;
+	padding: 20px 0;
 }
-/*
-.centerdetail
-{
-	float:left;
-	width:760px; 
-	display: inline-block;
+
+.center img[src*="Highlights.jpg"] {
+	display: block;
+	width: calc(100% - 40px);
+	max-width: 760px;
+	height: auto;
+	margin: 0 auto 24px;
+	border-radius: 18px;
+	border: 1px solid rgba(16, 185, 129, 0.18);
+	box-shadow: 0 18px 38px rgba(16, 185, 129, 0.14);
 }
-*/
+
+.center p {
+	background: #f6fdf7;
+	border-radius: 18px;
+	padding: 18px 22px;
+	margin: 14px 20px;
+	box-shadow: 0 14px 28px rgba(16, 185, 129, 0.06);
+}
+
+.center p a {
+	color: #065f46;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.center p a:hover {
+	color: #047857;
+	text-decoration: underline;
+}
+
+.center p img {
+	max-width: 42px;
+	margin-right: 12px;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+
+.center h2, .center h3, .center h4 {
+	color: #064e3b;
+}
+
+.center p span.date-label {
+	display: block;
+	font-size: 0.85rem;
+	color: #16a34a;
+	margin-bottom: 8px;
+}
+
+.center p + p {
+	margin-top: 0;
+}
+
+.center p:first-child {
+	margin-top: 0;
+}
+
+.center p:last-child {
+	margin-bottom: 24px;
+}
+
+.center p img[align="left"] {
+	float: left;
+	margin-right: 14px;
+	margin-bottom: 12px;
+}
+
+.center p strong,
+.center p b {
+	color: #064e3b;
+}
+
 .centeradmin
 {
 	background-color:#FFF;
@@ -180,48 +307,126 @@ h1
 	margin-bottom:3px;
 	width:95.8%; 
 	display: inline-block;
-	border:1px solid black;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 #petunjuk
 {
 	font-size:12px; 
 	margin-left:100px;
+	color: #718096;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 .right
 {
 	float:left;
-	width:19.6%;
+	width:20%;
 	display: inline-block;
-	border:1px solid;
+	border: none;
+	border-radius: 18px;
+	box-shadow: 0 18px 45px rgba(16, 185, 129, 0.08);
 	position:absolute;
+	background: #ffffff;
+	padding: 22px 18px 24px;
 }
-.right ul{
+
+.right ul {
+	padding: 0;
+	margin-left: -40px;
+	margin-top: -3px;
 	list-style-type: none;
-	margin-left:-40px;
-	margin-top:-3px;
+}
+
+.right li {
+	margin-bottom: 18px;
+}
+
+.right li:first-child img {
+	width: 100%;
+	border-radius: 18px;
+	box-shadow: 0 20px 45px rgba(16, 185, 129, 0.12);
+}
+
+.right h3 {
+	font-size: 1.05rem;
+	color: #064e3b;
+	margin: 15px 0 5px 30px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.right .otd-title {
+	font-size: 0.85rem;
+	font-weight: 700;
+	color: #047857;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.right p {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: #1f2937;
+	background: #f0fdf4;
+	border: 1px solid #d1fae5;
+	border-radius: 18px;
+	padding: 18px 16px;
+	margin-left: 40px;
+	box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.08);
 }
 .footer
 {
-	background:url('Images/Footer.jpg');
+	background: #f0fdf4;
 	clear:both;
-	height:70px;
-	width:97%;
-	margin-left: 20px;
-	margin-right: 50px;
+	min-height: 60px;
+	width: calc(100% - 40px);
+	margin: 30px auto 20px;
+	padding: 18px 24px;
 	text-align: center;
 	position: relative;
 	z-index:1;
+	border-radius: 18px;
+	border: 1px solid #a7f3d0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #064e3b;
+	font-weight: 600;
+	box-shadow: 0 20px 40px rgba(16, 185, 129, 0.12);
+}
+
+.footer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 4px;
+	background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+	border-radius: 999px;
+	margin-top: -8px;
 }
 #tanggalKanan
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	margin-left:50px;
 	margin-right:50px;
 	text-align:right;
+	color: #4a5568;
 }
 .tabelIsi tr td
 {
 	padding-bottom: 5px;
+	transition: background-color 0.3s ease;
+}
+.tabelIsi tr:hover td
+{
+	background-color: #f0f4ff;
 }
 .tabelIsi .overlay 
 {
@@ -231,10 +436,331 @@ h1
     width:50%;
     height:25%;
     padding:10px;
-    background-color:rgba(0, 0, 0, 0.3);
+    background-color:rgba(16, 185, 129, 0.2);
     display:none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 .tabelIsi:hover .overlay 
 {
     display:block;
+}
+
+/* Modern 2020s Global Styles */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background: #f8fafb;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	color: #2d3748;
+	margin: 0;
+	padding: 10px 0;
+}
+
+a {
+	color: #10b981;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+a:hover {
+	color: #059669;
+	text-decoration: underline;
+}
+
+/* Button Styles */
+input[type="submit"],
+input[type="button"],
+button {
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	color: white;
+	border: none;
+	padding: 10px 24px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active {
+	transform: translateY(0);
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+	border: 2px solid #e2e8f0;
+	border-radius: 6px;
+	padding: 10px 12px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-size: 14px;
+	transition: all 0.3s ease;
+	background: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	border-color: #10b981;
+	box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+	background: #f0fdf4;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+/* Table Styles */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	/*margin: 15px 0;*/
+}
+
+table th {
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	color: white;
+	padding: 12px;
+	text-align: left;
+	font-weight: 600;
+	border: none;
+	border-radius: 6px;
+}
+
+table td {
+	padding: 12px;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+
+/* Image Styles */
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+}
+
+img:hover {
+	transform: scale(1.02);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+/* Article Detail Page Styling */
+.centerdetail h3 {
+	font-size: 1.8rem;
+	color: #064e3b;
+	margin-bottom: 16px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+.centerdetail table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.centerdetail img {
+	max-width: 280px;
+	height: auto;
+	border-radius: 16px;
+	box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+	margin: 0 20px 20px 0;
+	float: left;
+	transition: transform 0.3s ease;
+}
+
+.centerdetail img:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 24px 48px rgba(16, 185, 129, 0.2);
+}
+
+.centerdetail i {
+	font-size: 0.95rem;
+	color: #047857;
+	font-style: italic;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 12px;
+}
+
+.centerdetail > p {
+	line-height: 1.8;
+	font-size: 1rem;
+	color: #1f2937;
+}
+
+.centerdetail [align="justify"] {
+	color: #374151;
+	line-height: 1.8;
+	text-align: justify;
+}
+
+.centerdetail > p:first-of-type::first-letter {
+	font-size: 1.2em;
+}
+
+.centerdetail p:contains("Sumber:") {
+	border-top: 2px solid #d1fae5;
+	padding-top: 16px;
+	margin-top: 24px;
+	font-size: 0.9rem;
+	color: #6b7280;
+	font-style: italic;
+}
+
+.centerdetail h3:contains("Komentar") {
+	color: #064e3b;
+	margin-top: 32px;
+	margin-bottom: 18px;
+	font-size: 1.4rem;
+	border-bottom: 3px solid #d1fae5;
+	padding-bottom: 10px;
+}
+
+/* Comment Form Styling */
+.komentar {
+	background: #f0fdf4;
+	border: 2px solid #d1fae5;
+	border-radius: 16px;
+	padding: 20px;
+	margin: 18px 0;
+	box-shadow: 0 12px 24px rgba(16, 185, 129, 0.08);
+}
+
+.komentar table {
+	width: 100%;
+}
+
+.komentar input[type="text"] {
+	background: #ffffff;
+	border: 2px solid #a7f3d0;
+	border-radius: 10px;
+	padding: 10px 14px;
+	font-size: 0.95rem;
+	color: #1f2937;
+}
+
+.komentar textarea {
+	border: 2px solid #a7f3d0;
+	border-radius: 10px;
+	padding: 12px 14px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-size: 0.95rem;
+	resize: vertical;
+	background: #ffffff;
+}
+
+.komentar textarea:focus {
+	border-color: #10b981;
+	box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.commentbutton {
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 24px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+}
+
+.commentbutton:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+/* Pagination Styling */
+.centerdetail p:contains("Halaman") a {
+	color: #10b981;
+	border: 2px solid #a7f3d0;
+	border-radius: 8px;
+	padding: 6px 12px;
+	margin: 0 4px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+.centerdetail p:contains("Halaman") a:hover {
+	background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+	color: white;
+	border-color: #10b981;
+}
+
+/* Comment List Styling */
+.centerdetail p:contains("Oleh :") {
+	background: #f0fdf4;
+	border-left: 4px solid #10b981;
+	border-radius: 12px;
+	padding: 16px 18px;
+	margin: 16px 0;
+	box-shadow: 0 8px 20px rgba(16, 185, 129, 0.08);
+}
+
+.centerdetail p:contains("Oleh :") b {
+	color: #064e3b;
+	font-weight: 700;
+}
+
+.centerdetail #tanggalKanan {
+	font-size: 0.85rem;
+	color: #6b7280;
+	margin-top: 8px;
+	border-top: 1px solid #d1fae5;
+	padding-top: 8px;
+}
+
+/* Separator Styling */
+.centerdetail p:contains("----") {
+	border: none;
+	opacity: 0.3;
+	margin: 12px 0;
+	font-size: 0.8rem;
 }

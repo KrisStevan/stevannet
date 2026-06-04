@@ -38,8 +38,8 @@
 						Username 	<input id="name" type="text" name='username' class="userloginput" style="width: 300px; height: 25px;  margin-left: 5px;"/><br>
 						Password  	<input id="password" type="password" name='password' class="userloginput" style="width: 300px; height: 25px;  margin-left: 10px;"/><br>		
 						
-						<button type="button"  onclick="window.location='daftar.php'" style="width: 75px; height: 25px; margin-left:245px; margin-top:10px;">Daftar</button>
-						<input type="submit" name="submit" value="Log In" class="searchbutton" style="width: 75px; height: 25px; margin-left:1px; margin-top:10px;"/><br>
+						<button type="button"  onclick="window.location='daftar.php'" style="width: 100px; height: 35px; margin-left:175px; margin-top:10px;">Daftar</button>
+						<input type="submit" name="submit" value="Log In" class="searchbutton" style="width: 100px; height: 35px; margin-left:1px; margin-top:10px;"/><br>
 						<h5 style="font-color:red;"><?php echo $error; ?></h5>
 					</form>
 				</h4>
