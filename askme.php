@@ -73,11 +73,8 @@
 			?>
 			
 			<h3><a href="questions.php" style="color:black;">Lihat Pertanyaan yang Telah Terjawab</a></h3>
-			<p>
+			<div class="qa-list" style="margin-left: 40px;">
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
-
 					$jml_list=10;
 					$halaman=isset($_GET['page'])?(int) $_GET['page']:1;
 								
@@ -86,16 +83,20 @@
 					$offset=($halaman-1)*10;
 					$sqlstr = "SELECT * from questions WHERE jawaban IS NOT NULL order by id DESC limit $offset,10";
 					$hasil_1=mysqli_query($connection, $sqlstr);
-					$row=mysqli_fetch_row($hasil_1);
 
-					if(!$row)
+					if(!$hasil_1 || mysqli_num_rows($hasil_1) === 0) {
 						echo "Belum ada jawaban";
-					do{
-						list($id,$pertanyaan,$tanggal_dimuat,$jawaban,$username) = $row;
-						echo "<b>$pertanyaan</b> - $username<br>$jawaban<br>";
-						$isian = substr($jawaban,0,150);
-						echo "<br>";
-					}while($row=mysqli_fetch_row($hasil_1));
+					} else {
+						while($row = mysqli_fetch_assoc($hasil_1)) {
+							$pertanyaan = htmlspecialchars($row['pertanyaan']);
+							$jawaban = htmlspecialchars($row['jawaban']);
+							$username = htmlspecialchars($row['username']);
+							echo "<div class='qa-item' style='margin-bottom:24px;'>";
+							echo "<div class='qa-question' style='margin-bottom:6px;'><strong>$pertanyaan</strong> - $username</div>";
+							echo "<div class='qa-answer' style='margin-left:20px;'>$jawaban</div>";
+							echo "</div>";
+						}
+					}
 
 					//paginasi halaman
 					$sqlstr = "SELECT * from questions WHERE jawaban IS NOT NULL";
@@ -113,7 +114,7 @@
 					}
 					echo "</center>";
 				?>
-			</p>
+			</div>
 		</div>
 		<div class="right">
 			<?php

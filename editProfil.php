@@ -35,8 +35,6 @@
 			</h2>
 			<p>
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
 					$username=isset($_GET['linkID'])?$_GET['linkID']:'';
 
 					if(isset($_POST['username'])){
@@ -45,7 +43,7 @@
 						$username = $_POST["username"];
 						$password = $_POST['password'];
 						$hobi = $_POST['hobi'];
-						$topikFav = $_POST['topikFav'];
+						$topikFav = (int) $_POST['topikFav'];
 						$edit_user = mysqli_query($connection, "UPDATE users SET 
 													nama = '$nama', 
 													email = '$email',
@@ -107,29 +105,27 @@
 										<td>Topik Paling Disukai</td>
 										<td> :</td>
 										<td>
-											<select name="topikFav" id ="topikFav" class="signup" style="width: 250px; height: 20px; margin-left: 20px;">
-												<option selected value="<?php echo"$topikFav";?>"><?php echo"$nama_topik";?></option>
+											<select name="topikFav" id="topikFav" class="signup" style="width: 300px; height: 35px; margin-left: 20px; padding: 5px;">
 												<?php
-													$sqlstr = "SELECT * FROM topik";
+													$sqlstr = "SELECT id, nama_topik FROM topik";
 													$hasil = mysqli_query($connection, $sqlstr);
-													$row = mysqli_fetch_row($hasil);
-													
-													if($row)
-													{
-														do{
-															list($id,$nama_topik) = $row;
-															?>
-															<option value="<?php echo "$id"; ?>"><?php echo "$nama_topik"; ?></option>
-															<?php
-														}while($row = mysqli_fetch_row($hasil));
+													if($hasil && mysqli_num_rows($hasil) > 0) {
+														while($row = mysqli_fetch_assoc($hasil)) {
+															$option_id = $row['id'];
+															$option_name = htmlspecialchars($row['nama_topik']);
+															$selected = ($option_id == $topikFav) ? 'selected' : '';
+															echo "<option value=\"" . $option_id . "\" " . $selected . ">" . $option_name . "</option>";
+														}
+													} else {
+														echo "<option value=\"\">-- Tidak ada topik --</option>";
 													}
 												?>
 											</select>
 										</td>
 									</tr>
 								</table>
-								<input type="submit" value="Ubah Profil" style="width: 150px; height: 25px; margin-top:10px; margin-left:200px;"/>
-								<button type="button" onclick="location.href='profil.php'" style="width: 150px; height: 25px; margin-top:10px; margin-left:10px;">Kembali</button>
+								<input type="submit" value="Ubah Profil" style="width: 160px; height: 40px; margin-top:10px; margin-left:200px;"/>
+								<button type="button" onclick="location.href='profil.php'" style="width: 160px; height: 40px; margin-top:10px; margin-left:10px;">Kembali</button>
 								</p>
 							</form>	
 							<?php

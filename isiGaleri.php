@@ -33,8 +33,6 @@
 		<div class="centerdetail">
 			<p>
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
 					$id = $_GET["id"];
 					$sqlStrUntukJudul = "SELECT namaGaleri,tanggal,deskripsi FROM galeri WHERE id='$id'";
 					$pengantar=mysqli_query($connection, $sqlStrUntukJudul);

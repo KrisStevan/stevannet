@@ -1,35 +1,34 @@
-<?php
-	echo "<script src=\"time.js\"></script>";
-	echo "<br><div id=\"clock\"><br></div>
-			<ul>
-				<li><a href=\"eurovision.php\">Eurovision</a>
-				</li>
-				<li><a href=\"f1.php\">Formula and Endurance</a>
-				</li>
-				<li><a href=\"eurogames.php\">Eurogames and Olympics</a>
-				</li>
-				<li><a href=\"trending.php\">Trending</a>
-				</li>
-				<li><a href=\"langka.php\">Budaya Langka Indonesia</a>
-				</li>
-				<li><a href=\"coverasing.php\">Cover Bahasa Asing</a>
-				</li>
-				<li><a href=\"unusual.php\">Aksi Tak Biasa</a>
-				</li>
-				<li><a href=\"indoineuro.php\">Indonesians Abroad</a>
-				</li>
-				<li><a href=\"legends.php\">Para Legenda</a>
-				</li>
-				<li><a href=\"mycollections.php\">Koleksiku</a>
-				</li>
-				<li><a href=\"sejarahterbaik.php\">Kisah Sejarah Terbaik</a>
-				</li>
-				<li><a href=\"admin.php\">User's Room</a>
-				</li>
-				<li><img src=\"Images/PictureOTM.jpg\" style=\"width:99%; height:30px; border:1px solid;\">
-				</li>
-				<li><img src=\"Images/GW.jpg\" style=\"width:99%; height:240px; border:1px solid; margin-top:-6px;\">
-				</li>
-			</ul>
-			";
-?>
+<script src="time.js"></script>
+<br>
+<div id="clock"><br></div>
+
+<ul>
+	<?php
+		include "db.inc.php";
+		connect_db($connection);
+
+		$sqlstr = "SELECT * from topik";
+		$hasil=mysqli_query($connection, $sqlstr);
+		$row=mysqli_fetch_row($hasil);
+		
+		if(!$row)
+			echo "Terjadi Kesalahan pada sistem anda";
+		do{
+			list($id,$nama_topik,$kode_topik,$page_name) = $row;
+			
+			echo "<li>
+					<a href='bytopic.php?topic=$id'>$nama_topik</a>
+				</li>";
+			
+		}while($row=mysqli_fetch_row($hasil));
+	?>
+	<li>
+		<a href="admin.php">User's Room</a>
+	</li>
+	<li>
+		<img src="Images/PictureOTM.jpg" style="width:99%; height:30px; border:1px solid;">
+	</li>
+	<li>
+		<img src="Images/GW.jpg" style="width:99%; height:240px; border:1px solid; margin-top:-6px;">
+	</li>
+</ul>

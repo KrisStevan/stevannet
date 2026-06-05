@@ -47,8 +47,6 @@
 		</div>
 		<div class="right">
 			<?php
-				include "db.inc.php";
-				connect_db($connection);
 				require("rightDIV.php");
 			?>
 		</div>

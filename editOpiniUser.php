@@ -34,8 +34,6 @@
 			</h1>
 			<p>
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
 					$id=isset($_GET['id'])?$_GET['id']:'';
 
 					if(isset($_POST['id'])){
@@ -79,7 +77,7 @@
 													<input type="hidden" name="id" value="<?php echo "$id"; ?>">
 												</td>
 										</table>
-										<input type="submit" value="Ubah Opini" style="width: 150px; height: 25px; margin-left:300px; margin-top:10px;"/>
+										<input type="submit" value="Ubah Opini" style="width: 160px; height: 40px; margin-left:300px; margin-top:10px;"/>
 									</p>
 								</form>
 							<?php

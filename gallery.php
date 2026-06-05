@@ -36,8 +36,6 @@
 			</h2>
 			<p>
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
 					$jml_list=10;
 					$halaman=isset($_GET['page'])?(int) $_GET['page']:1;
 											

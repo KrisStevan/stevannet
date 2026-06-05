@@ -32,8 +32,6 @@
 		</div>
 		<div class="center">
 			<?php
-				include "db.inc.php";
-				connect_db($connection);
 				if(isset($_SESSION['login_user'])){
 					$sqlstr = "SELECT reputation from users WHERE username = '$login_session'";
 					$hasil=mysqli_query($connection, $sqlstr);
@@ -54,6 +52,7 @@
 					$sqlnotif = "SELECT * FROM notifications WHERE userPenerima = '$login_session' LIMIT 5";
 					$hasilnotif=mysqli_query($connection, $sqlnotif);
 					$rownotif=mysqli_fetch_row($hasilnotif);
+
 					if(!$rownotif) echo "Belum ada Pemberitahuan<br>";
 					else{
 						list($id, $pesan, $userPenerima, $tanggal) = $rownotif;
@@ -67,6 +66,7 @@
 					$sqlstr = "SELECT * from articles order by id DESC limit 9";
 					$hasil_1=mysqli_query($connection, $sqlstr);
 					$row=mysqli_fetch_row($hasil_1);
+
 					if(!$row)
 						echo "Terjadi Kesalahan pada sistem anda";
 					echo "<img src=\"Images/Highlights.jpg\" style=\"margin-left:5px; width:750px; height:85px;\">";				

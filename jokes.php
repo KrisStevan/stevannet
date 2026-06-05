@@ -36,8 +36,6 @@
 			</h2>
 			<p>
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
 					$jml_list=8;
 					$halaman=isset($_GET['page'])?(int) $_GET['page']:1;
 							
@@ -53,7 +51,7 @@
 						list($id,$judul,$tanggal_muat,$tanggal_terjadi,$id_jenis,$id_topik,$isi,$gambar,$sumber) = $row;
 						if(!empty($gambar))
 							echo "<img src='Images/$gambar' width=35px height=35px align=left>";
-						echo "<a href='berita_detail.php?id=$id'>$tanggal_muat<br>$judul</a><br>";
+						echo "<a href='berita_detail.php?id=$id'>$tanggal_muat - $judul</a><br>";
 						$isian = substr($isi,0,150);
 						echo "<br><br>";
 					}while($row=mysqli_fetch_row($hasil_1));

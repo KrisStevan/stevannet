@@ -35,18 +35,20 @@
 			</h1>
 			<p>
 				<?php
-					include "db.inc.php";
-					connect_db($connection);
-
 					if(isset($_SESSION['login_user'])){
-						$sqlstr = "SELECT u.nama, u.email, u.username, u.password, u.hobi, u.topikFav, u.reputation, t.id, t.nama_topik from users u JOIN topik t ON u.topikFav = t.id WHERE u.username = '$login_session'";
+						$sqlstr = "SELECT u.nama, u.email, u.username, u.password, u.hobi, u.topikFav, u.reputation, 
+										t.id, t.nama_topik 
+									from users u 
+										JOIN topik t ON u.topikFav = t.id 
+									WHERE u.username = '$login_session'";
 						$hasil=mysqli_query($connection, $sqlstr);
 						$row=mysqli_fetch_row($hasil);
-						list($nama,$email,$username,$password,$hobi,$topikFav,$reputation,$tid,$nama_topik) = $row;
+						list($nama,$email,$username,$password,$hobi,$topikFav,$reputation,
+								$tid,$nama_topik) = $row;
 						
 						echo "<table>";
 							echo "<tr>";
-								echo "<td>Nama </td>";
+								echo "<td>Nama</td>";
 								echo "<td> :</td>";
 								echo "<td>$nama</td>";
 							echo "</tr>";

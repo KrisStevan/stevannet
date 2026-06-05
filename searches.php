@@ -5,8 +5,7 @@
 		if($login_session == 'admin1')
 			header("location: adminPages/adminHome.php");
 	}
-	include "db.inc.php";
-	connect_db($connection);
+	
 	$src = $_GET["src"];
 ?>
 <html>

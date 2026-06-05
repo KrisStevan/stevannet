@@ -31,10 +31,7 @@
 		</div>
 		<div class="centerdetail">
 			<p>
-				<?php
-					include "db.inc.php";
-					connect_db($connection);
-					
+				<?php					
 					$halaman=isset($_GET['page'])?(int) $_GET['page']:1;
 					if(!empty($awal)) $awal = 0;
 				
