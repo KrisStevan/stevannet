@@ -1,7 +1,13 @@
 function sembunyikanDetail(id)
 {
 	var element = document.getElementById(id);
-	element.style.opacity = "1";
+	if (element) {
+		element.style.opacity = "1";
+	}
+	var hint = document.getElementById("txtHint");
+	if (hint && hint.dataset.default) {
+		hint.innerHTML = "<b>" + hint.dataset.default + "</b>";
+	}
 }
 function tampilkanDetail(id)
 {
