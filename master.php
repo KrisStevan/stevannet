@@ -87,9 +87,7 @@
     <body onload="startTime()">
         <div class="leftside">
             <script src="time.js"></script>
-            <br>
-            <div id="clock"><br></div>
-
+            <div id="clock"></div>
             <ul>
                 <?php
                     include "db.inc.php";
