@@ -116,12 +116,12 @@
 							<td><input type="text" name='sumber' class="adminaddnews" style="width: 300px; height: 20px;"/></td>
 						</tr>
 					</table>		 	
-					<input type="submit" value="Tambah Artikel" class="adminaddnews" style="width: 120px; height: 22px; margin-left:207px; margin-top:10px;"/>
-					<br><br>
+					<input type="submit" value="Tambah Artikel" class="adminaddnews" style="width: 180px; height: 40px; margin-left:207px; margin-top:10px;"/>
 				</form>
 			</h2>
 		</div>
 		<div class="footer">
+			<p>&copy; 2016 Stevannet. All rights reserved.</p>
 		</div>
 	</body>
 </html>

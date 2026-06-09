@@ -22,7 +22,8 @@
 	
 	<body>
 		<div class="centeradmin">
-				<h2>Topik dan Jenis - Delete, Edit or <a href="addTopic.php">Add</a> it</h2>
+			<h2>Topik dan Jenis - Delete, Edit or <a href="addTopic.php">Add</a> it</h2>
+			<p>
 				<table id="admin" border="1" style= "position:relative;">
 					<tr>
 						<td>ID</td>
@@ -43,15 +44,16 @@
 									echo "<td>$id</td>";
 									echo "<td>$nama_topik</td>";
 									echo"<td><a href=\"editTopic.php?linkID=$id\">Ubah</a><br>
-											 <a href=\"deleteTopic.php?linkID=$id\">Hapus</a></td>";
+												<a href=\"deleteTopic.php?linkID=$id\">Hapus</a></td>";
 									echo "</tr>";
 								}while($row = mysqli_fetch_row($hasil));
 							}
 						?>
 					</tr>
 				</table>
+			</p>
 			<p>
-				<table id="admin" border="1" style = "position:relative; top:-530px; left:500px; text-align:center;">
+				<table id="admin" border="1" style= "position:relative;">
 					<tr>
 						<td>ID</td>
 						<td>Jenis</td>
@@ -71,7 +73,7 @@
 									echo "<td>$id</td>";
 									echo "<td>$nama_jenis</td>";
 									echo"<td><a href=\"editJenis.php?linkID=$id\">Ubah</a><br>
-											 <a href=\"deleteJenis.php?linkID=$id\">Hapus</a></td>";
+												<a href=\"deleteJenis.php?linkID=$id\">Hapus</a></td>";
 									echo "</tr>";
 								}while($row = mysqli_fetch_row($hasil));
 							}

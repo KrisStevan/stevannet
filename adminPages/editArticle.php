@@ -97,47 +97,60 @@
 						</tr>
 						<tr>
 							<td>Tanggal Muat</td>
-							<td><input type="text" value= "<?php echo "$tanggal_muat"; ?>" name='tanggal_muat' style="width: 300px; height: 20px;"//></td>
+							<td><input type="text" value="<?php echo "$tanggal_muat"; ?>" name='tanggal_muat' style="width: 300px; height: 20px;" /></td>
 						</tr>
 						<tr>
 							<td>Tanggal Kejadian</td>
-							<td><input type="text" value= "<?php echo "$tanggal_terjadi"; ?>"name='tanggal_terjadi' style="width: 300px; height: 20px;"/></td>
+							<td><input type="text" value="<?php echo "$tanggal_terjadi"; ?>" name='tanggal_terjadi' style="width: 300px; height: 20px;"/></td>
 						</tr>
 						<tr>
 							<td>ID Jenis</td>
 							<td>
-								<select name="id_jenis" style="width: 200px; height: 20px;">
-									<option selected><?php echo"$id_jenis";?></option>
-									<option value="1">1 - News</option>
-									<option value="2">2 - Events</option>
-									<option value="3">3 - Jokes</option>
-									<option value="4">4 - Opinions</option>
+								<select name="id_jenis" class="signup" style="width: 300px; height: 35px; padding: 5px;">
+							<option value="">-- Pilih Jenis --</option>
+									<?php
+										$sqlstr = "SELECT id, nama_jenis FROM jenis";
+										$hasil = mysqli_query($connection, $sqlstr);
+										if($hasil && mysqli_num_rows($hasil) > 0) {
+											while($row = mysqli_fetch_assoc($hasil)) {
+												$option_id = $row['id'];
+												$option_name = htmlspecialchars($row['nama_jenis']);
+												$selected = ((int)$option_id === (int)$id_jenis) ? ' selected="selected"' : '';
+												echo "<option value=\"" . $option_id . "\"" . $selected . ">" . $option_name . "</option>";
+											}
+										} else {
+											echo "<option value=\"\">-- Tidak ada jenis --</option>";
+										}
+									?>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<td>ID Topik</td>
 							<td>
-								<select name="id_topik" style="width: 200px; height: 20px;">
-									<option selected><?php echo"$id_topik";?></option>
-									<option value="1">1 - Eurovision</option>
-									<option value="2">2 - Racing</option>
-									<option value="3">3 - Eurogames</option>
-									<option value="4">4 - Trending</option>
-									<option value="5">5 - Budaya Langka</option>
-									<option value="6">6 - Cover Bahasa Asing</option>
-									<option value="7">7 - Aksi Tak Biasa</option>
-									<option value="8">8 - Indonesians Abroad</option>
-									<option value="9">9 - Legenda</option>
-									<option value="10">10 - Koleksiku</option>
-									<option value="11">11 - Kisah Sejarah Terbaik</option>
+								<select name="id_topik" class="signup" style="width: 300px; height: 35px; padding: 5px;">
+									<option value="">-- Pilih Topik --</option>
+									<?php
+										$sqlstr = "SELECT id, nama_topik FROM topik";
+										$hasil = mysqli_query($connection, $sqlstr);
+										if($hasil && mysqli_num_rows($hasil) > 0) {
+											while($row = mysqli_fetch_assoc($hasil)) {
+												$option_id = $row['id'];
+												$option_name = htmlspecialchars($row['nama_topik']);
+												$selected = ((int)$option_id === (int)$id_topik) ? ' selected="selected"' : '';
+												echo "<option value=\"" . $option_id . "\"" . $selected . ">" . $option_name . "</option>";
+											}
+										} else {
+											echo "<option value=\"\">-- Tidak ada topik --</option>";
+										}
+									?>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<td width="200px;">Isi</td>
 							<td>
-								<textarea id="content" name="content" cols="90" rows="10"/><?php echo "$isi"; ?></textarea>
+								<textarea id="content" name="content" cols="90" rows="10"><?php echo htmlspecialchars($isi, ENT_QUOTES, 'UTF-8'); ?></textarea>
 							</td>
 						</tr>
 						<tr>
@@ -149,7 +162,7 @@
 							<td><input type="text" value= "<?php echo "$sumber"; ?>" name='sumber' style="width: 300px; height: 20px;"/></td>
 						</tr>
 					</table>		 	
-					<input type="submit" value="Ubah Artikel" style="width: 120px; height: 22px; margin-left:207px; margin-top:10px;"/>
+					<input type="submit" value="Ubah Artikel" style="width: 180px; height: 40px; margin-left:207px; margin-top:10px;"/>
 				</form>
 				<?php
 					}//end of while

@@ -25,15 +25,14 @@
 			<h2> Daftar Berita</h2>
 			<table id="admin" border="1">
 				<tr>
-					<td>ID</td>
 					<td>Judul</td>
-					<td>Tanggal Muat</td>
-					<td>Tanggal Kejadian</td>
-					<td>ID Jenis</td>
-					<td>ID Topik</td>
+					<td>Tgl. Muat</td>
+					<td>Tgl. Kejadian</td>
+					<td>Jenis</td>
+					<td>Topik</td>
 					<td>Gambar</td>
 					<td>Sumber</td>
-					<td>Tindakan</td>
+					<td>Aksi</td>
 				</tr>
 					<?php
 						include_once("../db.inc.php");
@@ -51,17 +50,17 @@
 						{
 							do{
 								list($id,$judul,$tanggal_muat,$tanggal_terjadi,$id_jenis,$id_topik,$isi,$gambar,$sumber) = $row;
-								echo "<tr>";
-								echo "<td>$id</td>";
-								echo "<td>$judul</td>";
-								echo "<td>$tanggal_muat</td>";
-								echo "<td>$tanggal_terjadi</td>";
-								echo "<td>$id_jenis</td>";
-								echo "<td>$id_topik</td>";
-								echo "<td>$gambar</td>";
-								echo "<td>$sumber</td>";
-								echo"<td><a href=\"editArticle.php?linkID=$id\">Ubah</a><br>
-										 <a href=\"deleteArticle.php?linkID=$id\">Hapus</a></td>";
+							$judul_short = strlen($judul) > 25 ? substr($judul, 0, 25) . '...' : $judul;
+							$sumber_short = strlen($sumber) > 20 ? substr($sumber, 0, 20) . '...' : $sumber;
+							echo "<tr>";
+							echo "<td title='$judul'>$judul_short</td>";
+							echo "<td>$tanggal_muat</td>";
+							echo "<td>$tanggal_terjadi</td>";
+							echo "<td>$id_jenis</td>";
+							echo "<td>$id_topik</td>";
+							echo "<td>$gambar</td>";
+							echo "<td title='$sumber'>$sumber_short</td>";
+							echo"<td class='admin-actions'><a href=\"editArticle.php?linkID=$id\">✎</a> <a href=\"deleteArticle.php?linkID=$id\">✕</a></td>";
 								echo "</tr>";
 							}while($row = mysqli_fetch_row($hasil));
 						}
