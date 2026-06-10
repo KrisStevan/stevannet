@@ -7,11 +7,11 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$hobi = $_POST['hobi'];
-	$id_topik1 = $_POST['id_topik1'];
+	$topikFav = $_POST['topikFav'];
 	
 	if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		//Valid email!
-		$sqlstr = "INSERT INTO users(nama,email,username,password,hobi,topikFav,reputation) VALUES('$nama','$email','$username','$password','$hobi','$id_topik1','100')";
+		$sqlstr = "INSERT INTO users(nama,email,username,password,hobi,topikFav,reputation) VALUES('$nama','$email','$username','$password','$hobi','$topikFav','100')";
 		$hasil = mysqli_query($connection, $sqlstr);
 		if($hasil)
 		{

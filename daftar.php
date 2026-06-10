@@ -42,24 +42,30 @@
 							<td><input id="hobi" type="text" name="hobi" class="signup" style="width: 300px; height: 20px; margin-right:30px;"/></td>
 						</tr>
 						<tr>
-							<td>Bidang yang paling suka diamati </td>
-							<td><select name="id_topik1" id ="id_topik1" class="signup" style="width: 300px; height: 20px; margin-right: 105px;">
-									<option value="1">Eurovision</option>
-									<option value="2">Racing (Formula and Endurance)</option>
-									<option value="3">Olympics</option>
-									<option value="4">Trending</option>
-									<option value="5">Budaya Langka</option>
-									<option value="6">Cover Bahasa Asing</option>
-									<option value="7">Aksi Tak Biasa</option>
-									<option value="8">Indonesians Abroad</option>
-									<option value="9">Legenda</option>
-									<option value="10">Koleksiku</option>
-									<option value="11">Kisah Sejarah Terbaik</option>
-								</select></td>
+							<td>Bidang favorit</td>
+							<td>
+								<select name="topikFav" id="topikFav" class="signup" style="width: 300px; height: 35px; padding: 5px;">
+									<?php
+										$sqlstr = "SELECT id, nama_topik FROM topik";
+										$hasil = mysqli_query($connection, $sqlstr);
+
+										if($hasil && mysqli_num_rows($hasil) > 0) {
+											while($row = mysqli_fetch_assoc($hasil)) {
+												$option_id = $row['id'];
+												$option_name = htmlspecialchars($row['nama_topik']);
+												$selected = ($option_id == $topikFav) ? 'selected' : '';
+												echo "<option value=\"" . $option_id . "\" " . $selected . ">" . $option_name . "</option>";
+											}
+										} else {
+											echo "<option value=\"\">-- Tidak ada topik --</option>";
+										}
+									?>
+								</select>
+							</td>
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="submit" name="submit" value="Sign Up" class="searchbutton" style="width: 75px; height: 25px; margin-top:5px;"/></td>
+							<td><input type="submit" name="submit" value="Sign Up" class="searchbutton" style="width: 180px; height: 40px; margin-top:5px;"/></td>
 						</tr>
 					</table>
 				</form>
@@ -111,8 +117,6 @@
 		</div>
 		<div class="right">
 			<?php
-				include "db.inc.php";
-				connect_db($connection);
 				require("rightDIV.php");
 			?>
 		</div>

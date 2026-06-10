@@ -73,59 +73,60 @@
 							?>
 							<form class="search" method= "POST" action="#" align="left">
 								<p>
-								 <table>
-									<tr>
-										<td>Username </td>
-										<td> :</td>
-										<td><input type="text" name="username" id="username" value="<?php echo "$username"; ?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" readonly/></td>
-									</tr>
-									<tr>
-										<td>Nama </td>
-										<td> :</td>
-										<td><input type="text" name="nama" id="nama" value="<?php echo "$nama"; ?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" /></td>
-									</tr>
-									<tr>
-										<td>Alamat Email </td>
-										<td> :</td>
-										<td><input type="text" name="email" id="email" value="<?php echo "$email";?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" /></td>
-									</tr>
-									<tr>
-										<td>Password</td>
-										<td> :</td>
-										<td>
-											<input type="password" name="password" id="password" value="<?php echo "$password";?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" />
-										</td>
-									</tr>
-									<tr>
-										<td>Hobi</td>
-										<td> :</td>
-										<td><input type="text" name="hobi" id="hobi" value="<?php echo "$hobi";?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" /></td>
-									</tr>
-									<tr>
-										<td>Topik Paling Disukai</td>
-										<td> :</td>
-										<td>
-											<select name="topikFav" id="topikFav" class="signup" style="width: 300px; height: 35px; margin-left: 20px; padding: 5px;">
-												<?php
-													$sqlstr = "SELECT id, nama_topik FROM topik";
-													$hasil = mysqli_query($connection, $sqlstr);
-													if($hasil && mysqli_num_rows($hasil) > 0) {
-														while($row = mysqli_fetch_assoc($hasil)) {
-															$option_id = $row['id'];
-															$option_name = htmlspecialchars($row['nama_topik']);
-															$selected = ($option_id == $topikFav) ? 'selected' : '';
-															echo "<option value=\"" . $option_id . "\" " . $selected . ">" . $option_name . "</option>";
+									<table>
+										<tr>
+											<td>Username </td>
+											<td> :</td>
+											<td><input type="text" name="username" id="username" value="<?php echo "$username"; ?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" readonly/></td>
+										</tr>
+										<tr>
+											<td>Nama </td>
+											<td> :</td>
+											<td><input type="text" name="nama" id="nama" value="<?php echo "$nama"; ?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" /></td>
+										</tr>
+										<tr>
+											<td>Alamat Email </td>
+											<td> :</td>
+											<td><input type="text" name="email" id="email" value="<?php echo "$email";?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" /></td>
+										</tr>
+										<tr>
+											<td>Password</td>
+											<td> :</td>
+											<td>
+												<input type="password" name="password" id="password" value="<?php echo "$password";?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" />
+											</td>
+										</tr>
+										<tr>
+											<td>Hobi</td>
+											<td> :</td>
+											<td><input type="text" name="hobi" id="hobi" value="<?php echo "$hobi";?>" style="width: 300px; height: 20px; margin-bottom:10px; margin-left: 20px;" /></td>
+										</tr>
+										<tr>
+											<td>Topik Paling Disukai</td>
+											<td> :</td>
+											<td>
+												<select name="topikFav" id="topikFav" class="signup" style="width: 300px; height: 35px; margin-left: 20px; padding: 5px;">
+													<?php
+														$sqlstr = "SELECT id, nama_topik FROM topik";
+														$hasil = mysqli_query($connection, $sqlstr);
+														
+														if($hasil && mysqli_num_rows($hasil) > 0) {
+															while($row = mysqli_fetch_assoc($hasil)) {
+																$option_id = $row['id'];
+																$option_name = htmlspecialchars($row['nama_topik']);
+																$selected = ($option_id == $topikFav) ? 'selected' : '';
+																echo "<option value=\"" . $option_id . "\" " . $selected . ">" . $option_name . "</option>";
+															}
+														} else {
+															echo "<option value=\"\">-- Tidak ada topik --</option>";
 														}
-													} else {
-														echo "<option value=\"\">-- Tidak ada topik --</option>";
-													}
-												?>
-											</select>
-										</td>
-									</tr>
-								</table>
-								<input type="submit" value="Ubah Profil" style="width: 160px; height: 40px; margin-top:10px; margin-left:200px;"/>
-								<button type="button" onclick="location.href='profil.php'" style="width: 160px; height: 40px; margin-top:10px; margin-left:10px;">Kembali</button>
+													?>
+												</select>
+											</td>
+										</tr>
+									</table>
+									<input type="submit" value="Ubah Profil" style="width: 160px; height: 40px; margin-top:10px; margin-left:200px;"/>
+									<button type="button" onclick="location.href='profil.php'" style="width: 160px; height: 40px; margin-top:10px; margin-left:10px;">Kembali</button>
 								</p>
 							</form>	
 							<?php
