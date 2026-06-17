@@ -10,6 +10,55 @@
 <html>
     <head>
 		<link rel="stylesheet" type="text/css" href="penampilan.css">
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+		
+        <!--used in daftar page-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#login").validate({
+                    rules:{
+                        nama:{
+                            required: true,
+                            minlength: 5,
+                            messages:{
+                                required: "wajib diisi",
+                                minlength: "Minimal 5 karakter"
+                            }
+                        },
+                            
+                        email:{
+                            required: true,
+                            messages:{
+                                required: "wajib diisi"
+                            }
+                        },
+                            
+                        username:{
+                            required: true,
+                            messages:{
+                                required: "wajib diisi"
+                            }
+                        },
+                            
+                        password:{
+                            required: true,
+                            messages:{
+                                required: "wajib diisi"
+                            }
+                        },
+                            
+                        hobi:{
+                            required: true,
+                            messages:{
+                                required: "wajib diisi"
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+
 		<div id="header">
 			<div id="searchform">
 				<form class="search" action="searches.php">
