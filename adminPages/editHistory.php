@@ -63,41 +63,44 @@
 					<table border = "0" style="font-size: 15px;">
 						<tr>
 							<td>ID</td>
-							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px; height: 20px; margin-left: 100px;" readonly/></td>
+							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 50px;" readonly/></td>
 						</tr>
 						<tr>
 							<td>Tanggal (Dalam Angka)</td>
-							<td><input type="text" name='tanggal' value="<?php echo "$tanggal"; ?>" class="adminaddhistory" style="width: 30px; height: 20px;  margin-left: 100px;"/></td>
+							<td><input type="text" name='tanggal' value="<?php echo "$tanggal"; ?>" class="adminaddhistory" style="width: 50px;" maxlength = "2"/></td>
 						</tr>
 						<tr>
 							<td>Bulan</td>
-							<td><select name="bulan" class="adminaddhistory" style="width: 30px; height: 20px;  margin-left: 100px;">
+							<td><select name="bulan" class="adminaddhistory" style="width: 100px;">
 									<option selected><?php echo "$tanggal"; ?></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
+									<option value="1">Januari</option>
+									<option value="2">Febuari</option>
+									<option value="3">Maret</option>
+									<option value="4">April</option>
+									<option value="5">Mei</option>
+									<option value="6">Juni</option>
+									<option value="7">Juli</option>
+									<option value="8">Agustus</option>
+									<option value="9">September</option>
+									<option value="10">Oktober</option>
+									<option value="11">November</option>
+									<option value="12">Desember</option>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<td>Tahun (Dalam Angka)</td>
-							<td><input type="text" name='tahun' value="<?php echo "$tahun"; ?>" class="adminaddhistory" style="width: 50px; height: 20px;  margin-left: 100px;"/></td>
+							<td><input type="text" name='tahun' value="<?php echo "$tahun"; ?>" class="adminaddhistory" style="width: 100px;"/></td>
 						</tr>
 						<tr>
 							<td>Judul</td>
-							<td><input type="text" name='judul' value="<?php echo "$judul"; ?>" class="adminaddhistory" style="width: 500px; height: 20px;  margin-left: 100px;"/></td>
+							<td><input type="text" name='judul' value="<?php echo "$judul"; ?>" class="adminaddhistory" style="width: 500px;"/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Ubah Sejarah" class="adminaddhistory" style="width: 150px; height: 22px; margin-left:283px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Ubah Sejarah" class="adminaddhistory" style="width: 150px;"/></td>
+						</tr>		
+					</table>
 				</form>
 				<?php
 					}//end of while

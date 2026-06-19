@@ -51,18 +51,22 @@
 							<td style="margin-left: 100px;"><?php echo "$id"; ?></td>
 						</tr>
 						<tr>
-							<td width = "200px">Pertanyaan</td>
+							<td>Pertanyaan</td>
 							<td style="margin-left: 100px;"><?php echo "$pertanyaan"; ?></td>
 						</tr>
 						<tr>
-							<td width = "200px">Tanggal Muat</td>
+							<td>Tanggal Muat</td>
 							<td style="margin-left: 100px;"><?php echo "$tanggal_dimuat"; ?></td>
-						<tr>
-							<td width = "200px">Jawaban</td>
-							<td><input type="text" name='jawaban' class="adminask" style="width: 500px; height: 20px;"/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Jawab" class="adminask" style="width: 120px; height: 22px; margin-left:207px; margin-top:10px;"/>
+						<tr>
+							<td>Jawaban</td>
+							<td><input type="text" name='jawaban' class="adminask" style="width: 500px;" value="<?php echo "$jawaban"; ?>"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Jawab" class="adminask" style="width: 200px; margin-top:10px;"/></td>
+						</tr>
+					</table>
 				</form>
 				<?php
 				}//end of else

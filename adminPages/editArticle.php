@@ -89,25 +89,25 @@
 					<table border = "0" style="font-size: 15px;">
 						<tr>
 							<td>ID</td>
-							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px; height: 20px;"/></td>
+							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px;"/></td>
 						</tr>
 						<tr>
-							<td>Judul</td>
-							<td><input type="text" value= "<?php echo "$judul"; ?>" name='judul' style="width: 300px; height: 20px;"/></td>
+							<td width="200px;">Judul</td>
+							<td><input type="text" value= "<?php echo "$judul"; ?>" name='judul' style="width: 800px;"/></td>
 						</tr>
 						<tr>
 							<td>Tanggal Muat</td>
-							<td><input type="text" value="<?php echo "$tanggal_muat"; ?>" name='tanggal_muat' style="width: 300px; height: 20px;" /></td>
+							<td><input type="text" value="<?php echo "$tanggal_muat"; ?>" name='tanggal_muat' style="width: 300px;" /></td>
 						</tr>
 						<tr>
 							<td>Tanggal Kejadian</td>
-							<td><input type="text" value="<?php echo "$tanggal_terjadi"; ?>" name='tanggal_terjadi' style="width: 300px; height: 20px;"/></td>
+							<td><input type="text" value="<?php echo "$tanggal_terjadi"; ?>" name='tanggal_terjadi' style="width: 300px;"/></td>
 						</tr>
 						<tr>
 							<td>ID Jenis</td>
 							<td>
-								<select name="id_jenis" class="signup" style="width: 300px; height: 35px; padding: 5px;">
-							<option value="">-- Pilih Jenis --</option>
+								<select name="id_jenis" class="signup" style="width: 300px; padding: 5px;">
+								<option value="">-- Pilih Jenis --</option>
 									<?php
 										$sqlstr = "SELECT id, nama_jenis FROM jenis";
 										$hasil = mysqli_query($connection, $sqlstr);
@@ -148,21 +148,24 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="200px;">Isi</td>
+							<td>Isi</td>
 							<td>
 								<textarea id="content" name="content" cols="90" rows="10"><?php echo htmlspecialchars($isi, ENT_QUOTES, 'UTF-8'); ?></textarea>
 							</td>
 						</tr>
 						<tr>
 							<td>Gambar</td>
-							<td><input type="file" name="gambar" style="width: 300px; height: 20px; margin-top:10px;" value="<?php echo "$gambar"; ?>"></td>
+							<td><input type="file" name="gambar" style="width: 300px; " value="<?php echo "$gambar"; ?>"></td>
 						</tr>
 						<tr>
 							<td>Sumber</td>
-							<td><input type="text" value= "<?php echo "$sumber"; ?>" name='sumber' style="width: 300px; height: 20px;"/></td>
+							<td><input type="text" value= "<?php echo "$sumber"; ?>" name='sumber' style="width: 800px;"/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Ubah Artikel" style="width: 180px; height: 40px; margin-left:207px; margin-top:10px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Ubah Artikel" style="width: 150px;"/></td>
+						</tr>
+					</table>
 				</form>
 				<?php
 					}//end of while
@@ -171,6 +174,7 @@
 			</h3>
 		</div>
 		<div class="footer">
+			<p>&copy; 2016 Stevannet. All rights reserved.</p>
 		</div>
 	</body>
 </html>

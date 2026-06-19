@@ -13,7 +13,7 @@
 	<head>
 		<link rel="stylesheet" href="../penampilan.css">
 		<div id="header">
-			
+
 		</div>
 		<?php
 			require("leftDIVAdmin.php");
@@ -51,15 +51,18 @@
 				<form class="search" method= "POST" action="#" align="left">
 					<table border = "0" style="font-size: 15px;">
 						<tr>
-							<td>ID</td>
-							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px; height: 20px;  margin-left: 100px;"/></td>
+							<td style="width: 200px;">ID</td>
+							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px;" readonly/></td>
 						</tr>
 						<tr>
 							<td>Nama Topik</td>
-							<td><input type="text" value= "<?php echo "$nama_topik"; ?>" name='nama_topik' style="width: 300px; height: 20px;  margin-left: 100px;"/></td>
+							<td><input type="text" value= "<?php echo "$nama_topik"; ?>" name='nama_topik' style="width: 200px; "/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Ubah Topik" style="width: 150px; height: 22px; margin-left:195px; margin-top:5px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Ubah Topik" style="width: 150px;"/></td>
+						</tr>
+					</table>
 				</form>
 				<?php
 					}//end of while

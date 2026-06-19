@@ -51,15 +51,18 @@
 				<form class="search" method= "POST" action="#" align="left">
 					<table border = "0" style="font-size: 15px;">
 						<tr>
-							<td>Pengguna</td>
-							<td><input type="text" value= "<?php echo "$username"; ?>" name='username' style="width: 100px; height: 20px;  margin-left: 100px;" readonly/></td>
+							<td width="200px;">Pengguna</td>
+							<td><input type="text" value= "<?php echo "$username"; ?>" name='username' style="width: 100px;" readonly/></td>
 						</tr>
 						<tr>
 							<td>Poin Reputasi</td>
-							<td><input type="text" value= "<?php echo "$reputation"; ?>" name='reputation' style="width: 100px; height: 20px;  margin-left: 100px;"/></td>
+							<td><input type="text" value= "<?php echo "$reputation"; ?>" name='reputation' style="width: 100px;"/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Ubah User" style="width: 150px; height: 22px; margin-left:207px; margin-top:5px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Ubah User" style="width: 150px;"/></td>
+						</tr>
+					</table>
 				</form>
 				<?php
 					}//end of while
@@ -68,6 +71,7 @@
 			</h3>
 		</div>
 		<div class="footer">
+			<p>&copy; 2016 Stevannet. All rights reserved.</p>
 		</div>
 	</body>
 </html>

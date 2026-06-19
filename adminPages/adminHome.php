@@ -21,17 +21,6 @@
 	</head>
 	
 	<body>
-		<!-- <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
-			bkLib.onDomLoaded(function() { 
-				nicEditors.allTextAreas() 
-				new nicEditor().panelInstance('area1');
-				new nicEditor({fullPanel : true}).panelInstance('area2');
-				new nicEditor({iconsPath : '../nicEditorIcons.gif'}).panelInstance('area3');
-				new nicEditor({buttonList : ['fontSize','bold','italic','underline','strikeThrough','subscript','superscript','html','image']}).panelInstance('area4');
-				new nicEditor({maxHeight : 100}).panelInstance('area5');
-			});
-		</script> -->
-
 		<script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script> 
 		<script type="text/javascript">
 			bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
@@ -42,25 +31,22 @@
 				<br><br>
 				<form method="post" action="addArticle.php" class="adminaddnews" align="left" enctype="multipart/form-data">
 					<table border = "0" style="font-size: 15px;">
-						<!--<tr>
-							<td>ID</td>
-							<td><input type="text" name='id' class="adminaddnews" style="width: 100px; height: 20px;"/></td>
-						</tr>-->
 						<tr>
 							<td>Judul</td>
-							<td><input type="text" name='judul' class="adminaddnews" style="width: 300px; height: 20px;"/></td>
+							<td><input type="text" name='judul' class="adminaddnews" style="width:800px"/></td>
 						</tr>
 						<tr>
 							<td>Tanggal Kejadian</td>
-							<td><input type="text" name='tanggal_terjadi' class="adminaddnews" style="width: 300px; height: 20px;"/></td>
+							<td><input type="text" name='tanggal_terjadi' class="adminaddnews" style="width: 300px;"/></td>
 						</tr>
 						<tr>
 							<td>ID Jenis</td>
 							<td>
-								<select name="id_jenis" class="adminaddnews" style="width: 200px; height: 20px;">
+								<select name="id_jenis" class="adminaddnews" style="width: 300px;">
 									<?php
 										include_once("../db.inc.php");
 										connect_db($connection);
+
 										$sqlstr = "SELECT * FROM jenis";
 										$hasil = mysqli_query($connection, $sqlstr);
 										$row = mysqli_fetch_row($hasil);
@@ -81,7 +67,7 @@
 						<tr>
 							<td>ID Topik</td>
 							<td>
-								<select name="id_topik" id ="id_topik" class="adminaddnews" style="width: 200px; height: 20px;">
+								<select name="id_topik" id ="id_topik" class="adminaddnews" style="width: 300px;">
 									<?php
 										include_once("../db.inc.php");
 										connect_db($connection);
@@ -109,14 +95,17 @@
 						</tr>
 						<tr>
 							<td>Gambar</td>
-							<td><input type="file" name="gambar" style="width: 300px; height: 20px; margin-top:10px;"></td>
+							<td><input type="file" name="gambar"></td>
 						</tr>
 						<tr>
 							<td>Sumber</td>
-							<td><input type="text" name='sumber' class="adminaddnews" style="width: 300px; height: 20px;"/></td>
+							<td><input type="text" name='sumber' class="adminaddnews" style="width:800px"/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Tambah Artikel" class="adminaddnews" style="width: 180px; height: 40px; margin-left:207px; margin-top:10px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Tambah Artikel" class="adminaddnews" style="width: 200px;"/></td>
+						</tr>
+					</table>
 				</form>
 			</h2>
 		</div>

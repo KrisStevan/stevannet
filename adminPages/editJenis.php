@@ -52,14 +52,17 @@
 					<table border = "0" style="font-size: 15px;">
 						<tr>
 							<td>ID</td>
-							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px; height: 20px;  margin-left: 100px;"/></td>
+							<td><input type="text" value= "<?php echo "$id"; ?>" name='id' style="width: 100px; "/></td>
 						</tr>
 						<tr>
-							<td>Nama Jenis</td>
-							<td><input type="text" value= "<?php echo "$nama_jenis"; ?>" name='nama_jenis' style="width: 300px; height: 20px;  margin-left: 100px;"/></td>
+							<td style="width: 200px;">Nama Jenis</td>
+							<td><input type="text" value= "<?php echo "$nama_jenis"; ?>" name='nama_jenis' style="width: 200px; "/></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Ubah Jenis" style="width: 150px; height: 22px; margin-left:195px; margin-top:5px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Ubah Jenis" style="width: 150px; "/></td>
+						</tr>
+					</table>
 				</form>
 				<?php
 					}//end of while

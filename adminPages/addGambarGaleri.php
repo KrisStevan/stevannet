@@ -43,27 +43,24 @@
 			<h2> Edit atau Tambah Gambar - <?php echo "$judul";?>
 				<br><br>
 				<?php
-					do{
-						list($noGambar,$galeri,$gambar,$nama,$noUrutGambar,$tanggalUnggah,$deskripsi) = $row;
-						if($ctr%5==0){
-							echo "<tr>";
-						}
-						//isi tabelnya
-						echo "<td width='180'><a href=\"editGambarGaleri.php?id=$noGambar\">$noUrutGambar</a><img class='image' src='../Galeri/$gambar' width='180' height='180' id='$noGambar'></td>";
-						
-						//pengaturan baris tabel
-						if($ctr!=0 && $ctr%5==0){ 
-							echo "</tr>";  
-						}
-						$ctr++;
-						if($ctr==5){ 
-							$ctr=0; 
-						}
-						$ctr2++;
-					}while(@$row=mysqli_fetch_row($hasil));
+					if($row){
+						echo "<div class='gallery-thumb-list'>";
+						do{
+							list($noGambar,$galeri,$gambar,$nama,$noUrutGambar,$tanggalUnggah,$deskripsi) = $row;
+							echo "
+								<div class='gallery-thumb-item'>
+									<a href='editGambarGaleri.php?id=$noGambar' class='gallery-thumb-link'>
+										<span class='gallery-thumb-order'>$noUrutGambar</span>
+										<img class='gallery-thumb-image' src='../Galeri/$gambar' alt='$nama' title='$nama'>
+									</a>
+								</div>
+							";
+						}while($row=mysqli_fetch_row($hasil));
+						echo "</div>";
+					}
 				?>
 				<br>
-				<form method="post" action="addingGalleryPicture.php?save=ok&galeri=$galleryID" class="adminaddgallery" align="left" enctype="multipart/form-data">
+				<form method="post" action="addingGalleryPicture.php?save=ok&galeri=<?php echo $galleryID; ?>" class="adminaddgallery" align="left" enctype="multipart/form-data">
 					<table border = "0" style="font-size: 15px;">
 						<tr>
 							<input type="hidden" id='namaGaleri' name='namaGaleri' value="<?php echo $judul; ?>">
@@ -71,7 +68,7 @@
 						</tr>
 						<tr>
 							<td>Gambar</td>
-							<td><input type="file" name='gambar' style="width: 300px; height: 20px; margin-left: 100px;"/></td>
+							<td><input type="file" name='gambar' style="width: 300px; margin-left: 100px;"/></td>
 						</tr>
 						<tr>
 							<td>Nama</td>
@@ -85,12 +82,16 @@
 							<td>Deskripsi</td>
 							<td><textarea name="deskripsi" class="deskripsi" cols="90" rows="10" style="margin-left: 100px;"/></textarea></td>
 						</tr>
-					</table>		 	
-					<input type="submit" value="Tambah Gambar" class="adminaddgallery" style="width: 120px; height: 22px; margin-left:220px; margin-top:10px;"/>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Tambah Gambar" class="adminaddgallery" style="width: 150px; text-align: center"/></td>
+						</tr>
+					</table>
 				</form>
 			</h2>
 		</div>
 		<div class="footer">
+			<p>&copy; 2016 Stevannet. All rights reserved.</p>
 		</div>
 	</body>
 </html>
